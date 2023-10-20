@@ -2,6 +2,7 @@ taxa_page:
   overview:
     panels:
       - - - panel:gallery
+          - panel:test
           - panel:type
           - panel:type-specimen
           - panel:nomenclature
@@ -11,3 +12,7 @@ taxa_page:
           - panel:descendants
           - panel:content
           - panel:statistics
+  specimen_records:
+    rank_group: ['SpeciesGroup']
+    panels:
+      - - - panel:specimen-records
