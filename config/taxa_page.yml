@@ -2,7 +2,7 @@ taxa_page:
   overview:
     panels:
       - - - panel:gallery
-          - panel:test
+          - panel:inaturalist
           - panel:type
           - panel:type-specimen
           - panel:nomenclature
