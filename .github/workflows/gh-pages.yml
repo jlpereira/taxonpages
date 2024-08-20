@@ -2,7 +2,9 @@ name: public-build
 
 on:
   push:
-    branches: [main, setup]
+    branches: 
+      - main 
+      - setup
   workflow_dispatch:
 
 jobs:
