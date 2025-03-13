@@ -1,7 +1,7 @@
 ---
-title: Curculionidae of the World
-lead: A taxonomic catalog curated in TaxonWorks
-project: Curculionidae
+title: The title
+lead: Taxa from your imagination to the web
+project: Your project
 ---
    
 # {{frontmatter.title}}
@@ -14,10 +14,8 @@ Welcome to *{{ frontmatter.project }}*, a website of taxon pages generated from 
 <autocomplete-otu class="w-80"/>
 
 ## Announcements
-* 2024-10-15 - Curculionidae of the World has been released!
-
-## Disclaimer
-This catalog is a work in progress. So far the effort has been dedicated to the subfamily Entiminae. If you find information gaps in Entiminae, or if you would like to join the effort to update any Curculionid group, just send us an email at WeevilWorkers@gmail.com.
+* 5/1/2022 - We've grown!  
+* 1/1/2022 - Our website is live!
 
 ## Find out more
-Learn how to collaborate with the {{ frontmatter.project }} project. Contact information, technical details, and more are available at [About](/about).
+Learn how to collaborate with the {{ frontmatter.title }} project. Contact information, technical details, and more are available at [About](/about).
