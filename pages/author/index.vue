@@ -54,8 +54,7 @@ function loadSearchPage() {
   router.push({
     path: '/author/search',
     query: {
-      author: author.value,
-      extend: ['taxonomy']
+      author: author.value
     }
   })
 }
