@@ -2,7 +2,7 @@
   --color-primary: 0, 0, 0;
   --color-primary-content: 255, 255, 255;
 
-  --color-secondary: 14, 165, 233;
+  --color-secondary: 0, 138, 46;
   --color-secondary-content: 255, 255, 255;
 
   --color-base-foreground: 255, 255, 255;
@@ -29,12 +29,12 @@
 .dark {
   --color-primary: 23, 23, 23;
   --color-primary-content: 255, 255, 255;
-  
+
   --color-secondary: 14, 165, 233;
   --color-secondary-content: 255, 255, 255;
 
   --color-base-background: 23, 23, 23;
-  --color-base-foreground: 38,38,38;
+  --color-base-foreground: 38, 38, 38;
   --color-base-muted: 48, 48, 48;
   --color-base-soft: 200, 200, 200;
   --color-base-lighter: 220, 220, 220;

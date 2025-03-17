@@ -2,7 +2,7 @@
 header_logo_url:
 header_logo_text: My project
 header_links:
-  - label: Home
+  - label: Search
     link: /
 
   - label: Distribution
@@ -13,6 +13,3 @@ header_links:
 
   - label: Author
     link: /author
-
-  - label: About
-    link: /about

@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white h-full">
+  <section class="bg-base-foreground h-full">
     <VSpinner v-if="isLoading" />
     <div class="mx-auto container">
       <div class="px-4 md:px-0">

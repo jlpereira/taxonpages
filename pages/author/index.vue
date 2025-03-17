@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white h-full">
+  <section class="bg-base-foreground h-full">
     <div class="mx-auto container py-12">
       <div class="flex flex-col justify-center px-4">
         <div class="w-auto mx-auto flex flex-col gap-4">
@@ -10,7 +10,7 @@
 
           <div class="max-w-[400px] flex flex-row">
             <input
-              class="bg box-border bg-gray-200 px-4 py-3 text-sm w-full"
+              class="scalenet-input"
               type="text"
               placeholder="Search author..."
               v-model="author"
@@ -24,11 +24,11 @@
             </VButton>
           </div>
           <div></div>
-          <div class="max-w-[400px]">
+          <div class="max-w-[400px] text-sm">
             <p class="mb-2">
-              Use: Search author names (ex: Miller or Miller,D.R.) to get a list
-              of species and genera described by them. Search is greedy! For
-              other
+              <b>Use:</b> Search author names (ex: Miller or Miller,D.R.) to get
+              a list of species and genera described by them. Search is greedy!
+              For other
             </p>
             <p>
               types of queries, use the search links at the top of the page.
