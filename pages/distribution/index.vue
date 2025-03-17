@@ -8,7 +8,24 @@
             :src="ScaleLogo"
             class="mx-auto cursor-zoom-out my-auto w-[400px]"
           />
-          <RouterLink to="/distribution/12">Argentina</RouterLink>
+          <InputAttribute
+            v-for="(label, attribute) in DWC_ATTRIBUTES"
+            :key="attribute"
+            :label="label"
+            :attribute="attribute"
+            v-model="queryParams"
+            v-model:wildcards="wildcards"
+          />
+
+          <div>
+            <VButton
+              primary
+              :disabled="!hasValues"
+              @click="openDistributionSearch"
+            >
+              Search
+            </VButton>
+          </div>
         </div>
       </div>
     </div>
@@ -16,13 +33,35 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
-import { makeAPIRequest } from '@/utils'
+import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import ScaleLogo from '../images/SN-logo-400.png'
+import InputAttribute from './components/InputAttribute.vue'
+
+const DWC_ATTRIBUTES = {
+  country: 'Country',
+  stateProvince: 'State/Province'
+}
 
 const router = useRouter()
 const isLoading = ref(false)
 
-const { project_token, url } = __APP_ENV__
+const queryParams = ref({})
+const wildcards = ref([])
+
+const hasValues = computed(() => {
+  const values = Object.values(queryParams.value)
+
+  return values.length && values.some(Boolean)
+})
+
+function openDistributionSearch() {
+  router.push({
+    path: '/distribution/search',
+    query: {
+      ...queryParams.value,
+      wildcard_attribute: wildcards.value
+    }
+  })
+}
 </script>

@@ -22,8 +22,7 @@ const list = ref([])
 onMounted(() => {
   const params = {
     page: 1,
-    ...route.query,
-    extend: ['otus']
+    ...route.query
   }
 
   loadOtus(params)
@@ -32,6 +31,8 @@ onMounted(() => {
 async function loadOtus(params) {
   isLoading.value = true
   list.value = (await makeAPIRequest.get('/taxon_names', { params })).data
+
+  list.value.sort((a, b) => a.name_string.localeCompare(b.name_string))
 
   if (list.value.length) {
     const { data } = await makeAPIRequest.get('/otus', {

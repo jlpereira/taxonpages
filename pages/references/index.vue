@@ -9,27 +9,25 @@
             class="mx-auto cursor-zoom-out my-auto w-[400px]"
           />
 
-          <div class="max-w-[400px]">
+          <div class="max-w-[400px] flex flex-col gap-4">
             <input
-              class="bg box-border bg-gray-200 px-4 py-3 text-sm w-full"
+              class="scalenet-input"
               type="text"
               placeholder="Search author..."
               v-model="fields.author"
               @keypress.enter="loadSearchPage"
             />
-          </div>
-          <div class="max-w-[400px]">
+
             <input
-              class="bg box-border bg-gray-200 px-4 py-3 text-sm w-full"
+              class="scalenet-input"
               type="number"
               placeholder="Start year"
               v-model="fields.year_start"
               @keypress.enter="loadSearchPage"
             />
-          </div>
-          <div class="max-w-[400px]">
+
             <input
-              class="bg box-border bg-gray-200 px-4 py-3 text-sm w-full"
+              class="scalenet-input"
               type="number"
               placeholder="End year"
               v-model="fields.year_end"
