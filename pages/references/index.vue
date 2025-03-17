@@ -69,7 +69,7 @@ const fields = reactive({
   author: '',
   keyword_id_or: [],
   year_start: undefined,
-  year_end: new Date().getFullYear()
+  year_end: undefined
 })
 
 function loadReferences() {
