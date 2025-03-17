@@ -1,11 +1,21 @@
 <template>
   <section class="bg-base-foreground h-full">
     <VSpinner v-if="isLoading" />
-    <div class="mx-auto container">
+    <div class="mx-auto container py-12">
+      <template v-if="pagination">
+        <h1 class="text-xl mb-4">{{ pagination.total }} references found.</h1>
+        <VPagination
+          :total="pagination.total"
+          :per="pagination.per"
+          v-model="pagination.page"
+          @update:modelValue="(page) => loadReferences({ ...parameters, page })"
+        />
+      </template>
+
       <div class="px-4 md:px-0">
         <div class="flex flex-col justify-center px-4"></div>
-        <TableReferences
-          class="mt-8 w-full md:w-1/2 mx-auto"
+        <ListReferences
+          class="mt-8 w-full mx-auto"
           :list="references"
         />
       </div>
@@ -17,26 +27,20 @@
 import { ref, reactive, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { makeAPIRequest } from '@/utils'
-import TableReferences from './components/TableReferences.vue'
-import ScaleLogo from '../images/SN-logo-400.png'
+import { makePagination } from '#/pages/utils'
+import ListReferences from './components/ListReferences.vue'
 
 const route = useRoute()
 const isLoading = ref(false)
 const references = ref([])
-const fields = reactive({
-  author: '',
-  keyword_id_or: [],
-  year_start: undefined,
-  year_end: new Date().getFullYear()
-})
+const pagination = ref()
+const { page, ...parameters } = route.query
 
 onMounted(() => {
-  const params = {
-    page: 1,
-    ...route.query
-  }
-
-  loadReferences(params)
+  loadReferences({
+    page: page || 1,
+    ...parameters
+  })
 })
 
 function loadReferences(params) {
@@ -45,8 +49,9 @@ function loadReferences(params) {
 
   makeAPIRequest
     .get('/sources', { params })
-    .then(({ data }) => {
-      references.value = data
+    .then((response) => {
+      references.value = response.data
+      pagination.value = makePagination(response.headers)
     })
     .finally(() => {
       isLoading.value = false

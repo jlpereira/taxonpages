@@ -15,12 +15,13 @@
             :attribute="attribute"
             v-model="queryParams"
             v-model:wildcards="wildcards"
+            @keypress.enter="openDistributionSearch"
           />
 
           <div>
             <VButton
               primary
-              :disabled="!hasValues"
+              class="py-3"
               @click="openDistributionSearch"
             >
               Search
@@ -33,7 +34,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import ScaleLogo from '../images/SN-logo-400.png'
 import InputAttribute from './components/InputAttribute.vue'
@@ -45,15 +46,8 @@ const DWC_ATTRIBUTES = {
 
 const router = useRouter()
 const isLoading = ref(false)
-
 const queryParams = ref({})
 const wildcards = ref([])
-
-const hasValues = computed(() => {
-  const values = Object.values(queryParams.value)
-
-  return values.length && values.some(Boolean)
-})
 
 function openDistributionSearch() {
   router.push({

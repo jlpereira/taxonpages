@@ -45,10 +45,6 @@
             </VButton>
           </div>
         </div>
-        <TableReferences
-          class="mt-8 w-full md:w-1/2 mx-auto"
-          :list="references"
-        />
       </div>
     </div>
   </section>
@@ -58,7 +54,6 @@
 import { ref, reactive } from 'vue'
 import { makeAPIRequest } from '@/utils'
 import { useRouter } from 'vue-router'
-import TableReferences from './components/TableReferences.vue'
 import KeywordSelector from './components/KeywordSelector.vue'
 import ScaleLogo from '../images/SN-logo-400.png'
 
@@ -71,20 +66,6 @@ const fields = reactive({
   year_start: undefined,
   year_end: undefined
 })
-
-function loadReferences() {
-  isLoading.value = true
-  references.value = []
-
-  makeAPIRequest
-    .get('/sources', { params: fields })
-    .then(({ data }) => {
-      references.value = data
-    })
-    .finally(() => {
-      isLoading.value = false
-    })
-}
 
 function loadSearchPage() {
   router.push({
