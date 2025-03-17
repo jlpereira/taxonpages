@@ -33,7 +33,7 @@
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { makeAPIRequest } from '@/utils'
-import { makePagination } from '#/utils'
+import { makePagination } from '#/pages/utils'
 
 const route = useRoute()
 const list = ref([])
