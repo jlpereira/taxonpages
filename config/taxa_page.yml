@@ -1,0 +1,22 @@
+---
+taxa_page:
+  overview:
+    panels:
+      - - - panel:gallery
+          - panel:type
+          - panel:type-specimen
+          - panel:nomenclature
+          - panel:nomenclature-references
+        - - panel:map
+          - panel:descendants
+          - panel:content
+          - panel:keys
+          - panel:statistics
+          - panel:sounds
+  iNaturalist:
+    panels:
+      - - - id: panel:inaturalist
+            bind:
+              iconicTaxa: Insecta
+              thumbnailSize: medium
+              columnsDesktop: '6'

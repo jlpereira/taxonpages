@@ -12,6 +12,9 @@
     "setup": "taxonpages setup"
   },
   "dependencies": {
+    "@jlpereira/taxonpages-module-dichotomous": "^0.0.3",
+    "@jlpereira/taxonpages-module-homepage": "^0.1.0",
+    "@jlpereira/taxonpages-panel-inaturalist": "^1.0.2",
     "@sfgrp/taxonpages": "latest"
   }
 }

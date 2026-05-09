@@ -1,0 +1,91 @@
+---
+home_module:
+  hero:
+    title: Orthoptera Species File
+    subtitle: Taxonomic database of the world's grasshoppers, locusts, katydids, crickets, and related insects
+    description: ''
+    images:
+      - src: https://sfg.taxonworks.org/api/v1/images/937285/scale_to_box/0/0/800/550/800/550?project_token=3oerVKf82_196cIECvHYNg
+        label: Coryacris angustipennis
+        copyright: Cigliano, M.M
+        otuId: 823314
+  data:
+    types:
+      validSpecies: true
+      validExtantSpecies: true
+      taxonNames: true
+      projectSources: true
+      citations: true
+      images: true
+      mediaSounds: true
+      collectionObjects: true
+    enabled: true
+  sectionOrder:
+    - hero
+    - data
+    - description
+    - authors
+    - announcements
+    - terms
+  description:
+    paragraphs:
+      - The Orthoptera Species File (OSF) is a taxonomic database of the world’s Orthoptera (grasshoppers, locusts, katydids, crickets, and related insects) both living and fossil. It has full taxonomic and synonymic information for all taxa, with complete taxonomic references, images, sound recordings, and specimen records.
+      - The core purpose of the OSF is to provide a resource that makes research on Orthoptera more efficient as well as to cover the needs of policy-makers, environmental managers and the wider public for a consistent and up-to-date classification of the world’s Orthoptera species.
+      - It is open to contributions from anyone with specimen records and images.
+  authors:
+    enabled: true
+    sections:
+      - title: ''
+        people:
+          - name: Maria Marta Cigliano
+            role: Project Director & Author
+            location: División Entomología. Museo de La Plata, CEPAVE - CONICET, Argentina
+            image: ''
+          - name: Holger Braun
+            role: Author & Editor
+            location: División Entomología, Museo de La Plata, Argentina
+            image: ''
+          - name: David C. Eades
+            role: Founder of the Species File Group, Data base Developer of Species File Software
+            location: Illinois Natural History Survey, USA
+            image: ''
+          - name: Daniel Otte
+            role: Founder and Original Author
+            location: Academy of Natural Sciences of Philadelphia, USA
+            image: ''
+      - title: Major Contributors
+        people:
+          - name: Piotr Naskrecki
+            role: ''
+            location: Museum of Comparative Zoology, Harvard University
+            image: ''
+          - name: Martina Eugenia Pocco
+            role: ''
+            location: CEPAVE - CONICET, División Entomología, Museo de La Plata, Argentina
+            image: ''
+      - title: Assistant editor
+        people:
+          - name: María Belén Cabrera
+            role: ''
+            location: División Entomología, Museo de La Plata, Argentina
+            image: ''
+      - title: Developers
+        people:
+          - name: Hernán Lucas Pereira
+            role: ''
+            location: CEPAVE - CONICET, Argentina
+            image: ''
+          - name: José Luis Pereira
+            role: ''
+            location: División Entomología, Museo de La Plata, Argentina
+            image: ''
+    showFooter: true
+    footerText: With the cooperation of <a class="whitespace-nowrap" href="https://orthsoc.org/">The Orthopterists' Society</a>
+  terms:
+    blocks:
+      - title: Find out more
+        body: Find out more on this new public version of OSF. Learn how to collaborate with the Orthoptera Species File project. Contact information, technical details, and more are available at <a href="/about">About.</a>
+      - title: Format for referencing this website
+        body: 'When referencing this website, please use the following format: Cigliano, M.M., H. Braun, D.C. Eades & D. Otte. Orthoptera Species File [retrieval date]. < <a href="http://orthoptera.speciesfile.org/">http://orthoptera.speciesfile.org/</a> >'
+      - title: Terms of use
+        body: Except where otherwise noted, content on this site is licensed under a the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License (CC-BY)</a>. Images are by default open-access under the terms of the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA license</a>, unless stated otherwise
